@@ -18,7 +18,7 @@ dp [l][r] 表示一段连续区间 [l,r] 上的答案
 3. 点集回路: 利用线段不交的性质按顺序 dp
 
 #### 题目
-1. leetcode312
+1. [leetcode312](https://github.com/elijahqi/Leetcode/blob/main/DP/code/Leetcode312.md)
 
 ### 坐标DP
 1. 状态是由坐标维与其他的维组成.
