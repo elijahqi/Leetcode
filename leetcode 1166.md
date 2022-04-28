@@ -69,3 +69,40 @@ private:
  * int param_2 = obj->get(path);
  */
 ```
+Hashmap solution
+Since the path is unique, we can solve this problem with a hash_map based on path uniqueness
+```cpp
+class FileSystem {
+public:
+    FileSystem() {
+    }
+    
+    bool createPath(string path, int value) {
+        if (tree.count(path)>0) return false;
+        string s;
+        for (int i=0;i<path.size();++i){
+            if (i==0||path[i]!='/') s+=path[i];
+            else if (i!=0&&path[i]=='/'){
+                if (!tree.count(s)) return false;
+                else s+=path[i];
+            }
+        }
+        tree[path]=value;
+        return true;
+    }
+    
+    int get(string path) {
+        if(tree.count(path)>0) return tree[path];
+        return -1;
+    }
+private:
+    unordered_map<string,int> tree;
+};
+
+/**
+ * Your FileSystem object will be instantiated and called as such:
+ * FileSystem* obj = new FileSystem();
+ * bool param_1 = obj->createPath(path,value);
+ * int param_2 = obj->get(path);
+ */
+```
