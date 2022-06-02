@@ -1,7 +1,8 @@
-#Leetcode 105
+# Leetcode 105
 
 In the tree inorder, if the nodes appear before that node, then it will be in the left sub-tree, otherwise it will be in the right sub-tree.
-So we use map to store the location in the inorder,
+So we use map to store the location in the inorder, and in every recursion the inorder middle will be the preorder's beginng at inorder's position.
+and preorder's mid point will be the begining + inorder's middle-inorder's begining. Since the range between then will be the addition.
 ```cpp
 /**
  * Definition for a binary tree node.
