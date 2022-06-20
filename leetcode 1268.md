@@ -9,7 +9,7 @@ public:
         for (int i=1;i<=searchWord.size();++i){
             vector<string> itt;
             string strs=searchWord.substr(0,i);
-            for (auto &s:products){
+            for (auto &s:products){//here we can use the binary search to speed up the search process
                 if (i>s.size()) continue;
                 if (s.substr(0,i)==strs) itt.push_back(s);
             }
